@@ -1,0 +1,54 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build
+*.dll
+*.exe
+*.app
+*.appx
+*.nupkg
+
+# NuGet
+packages/
+*.nupkg
+.nuget/
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Database files
+*.mdf
+*.ldf
+
+# Others
+*.log
+*.vsix
+
+# Node
+node_modules/
+
+# JetBrains Rider
+.idea/
+
+# ASP.NET temporary files
+project.lock.json
+project.fragment.lock.json
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio files
+*.cache
+
+# Ignore Visual Studio Code launch settings
+.launchsettings.json
