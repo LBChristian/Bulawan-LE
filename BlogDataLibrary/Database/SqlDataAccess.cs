@@ -13,20 +13,37 @@ namespace BlogDataLibrary.Database
             this.connectionString = connectionString;
         }
 
-        public List<T> LoadData<T, U>(string sql, U parameters)
+        public List<T> LoadData<T, U>(
+            string sql,
+            U parameters,
+            CommandType commandType = CommandType.Text)
         {
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection =
+                   new SqlConnection(connectionString))
             {
-                List<T> rows = connection.Query<T>(sql, parameters).ToList();
+                List<T> rows = connection.Query<T>(
+                    sql,
+                    parameters,
+                    commandType: commandType
+                ).ToList();
+
                 return rows;
             }
         }
 
-        public void SaveData<T>(string sql, T parameters)
+        public void SaveData<T>(
+            string sql,
+            T parameters,
+            CommandType commandType = CommandType.Text)
         {
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection =
+                   new SqlConnection(connectionString))
             {
-                connection.Execute(sql, parameters);
+                connection.Execute(
+                    sql,
+                    parameters,
+                    commandType: commandType
+                );
             }
         }
     }
