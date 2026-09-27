@@ -6,3 +6,4 @@
     [LastName] NVARCHAR(50) NOT NULL, 
     [Password] NVARCHAR(16) NOT NULL
 )
+
